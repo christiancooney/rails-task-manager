@@ -1,4 +1,8 @@
+<div class="container text-center">
+<div class="card text-center">
 <h1>Edit Task</h1>
+</div>
+<div class="card text-center">
 
 <%= form_with model: @task do |f| %>
   <%= f.label :title %>
@@ -9,6 +13,10 @@
   <%= f.check_box :completed %>
   <%= f.submit %>
 <% end %>
+</div>
 
+<div class="card text-center">
 
-<p><%= link_to "Back to list", tasks_path %></p>
+<button><%= link_to "Back to list", tasks_path %></button>
+</div>
+</div>

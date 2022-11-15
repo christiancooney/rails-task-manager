@@ -1,14 +1,18 @@
+<div class="container text-center">
 <h1>My tasks</h1>
 
-
-<ol>
+<div class="card text-center">
+<ol class="list-group">
   <% @task.each do |task| %>
-    <li><%= link_to task.title, task_path(task)%></li>
-    <p><%= link_to "Delete", task_path(task),
+    <li class="list-group-item"><%= link_to task.title, task_path(task)%></li>
+    <button><%= link_to "Delete", task_path(task),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-    %></p>
+    %></button>
   <% end %>
+  </div>
 </ol>
 
-
-<p><%= link_to "Add a new task", tasks_new_path %></p>
+<div class="card text-center">
+<button class="text-center"><%= link_to "Add a new task", tasks_new_path %></button>
+</div>
+</div>

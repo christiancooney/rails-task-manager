@@ -1,15 +1,21 @@
+<div class="container text-center border">
 <h1>Task</h1>
-
+<div class="card text-center">
 <h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<p><%= @task.completed %></p>
-<p><%= link_to "Delete",
+<p>Description: <%= @task.details %></p>
+<p>Completed?: <%= @task.completed %></p>
+</div>
+<div class="card text-center">
+
+<button><%= link_to "Delete",
   task_path,
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%></p>
+%></button>
 
 
-
-<p><%= link_to "Edit task", tasks_edit_path %></p>
-
-<p><%= link_to "Back to list", tasks_path %></p>
+<button><%= link_to "Edit task", tasks_edit_path %></button>
+</div>
+<div class="card text-center">
+<button><%= link_to "Back to list", tasks_path %></button>
+</div>
+</div>
